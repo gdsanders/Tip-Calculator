@@ -58,14 +58,25 @@
                                 <state key="normal" title="Implicitly calculate">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="implicitlyConvertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IAD-wO-E5x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w73-Aq-G4W">
                                 <rect key="frame" x="278" y="28" width="50" height="50"/>
                                 <state key="normal" image="convertButton"/>
+                                <connections>
+                                    <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gF1-ab-urQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.80479424700157731" green="1" blue="0.62458889460353983" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="ly3-bB-hjN" id="UAq-4i-w3H"/>
+                        <outlet property="tipLabel" destination="49y-eD-gVj" id="r81-wO-q8j"/>
+                        <outlet property="totalWithTipLabel" destination="Ep5-ET-Xpb" id="MCg-Z2-Ylz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

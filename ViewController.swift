@@ -9,6 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var billTextField: UITextField!
+    @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var totalWithTipLabel: UILabel!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +25,21 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func convertButtonPressed(sender: UIButton) {
+        billTextField.resignFirstResponder()
+        print(billTextField.text!)
+        
+    }
+    
+    
+    @IBAction func implicitlyConvertButtonPressed(sender: UIButton) {
+        
+        
+    }
+    
+    
 
 
 }
