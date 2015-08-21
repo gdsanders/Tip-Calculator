@@ -31,23 +31,32 @@ class ViewController: UIViewController {
     
     @IBAction func convertButtonPressed(sender: UIButton) {
         billTextField.resignFirstResponder()
-       
-        if billTextField.text! != "" && billTextField.text != nil {
-            if tipValue! != 0 && tipValue != nil {
-                tipLabel.text = "\(tipValue!)"
-                
-                let totalWithTip = tipValue! + Double(billTextField.text!)!
-                totalWithTipLabel.text = "\(totalWithTip)"
-            }
-        else {
-                tipLabel.text = "No tip"
-                totalWithTipLabel.text = "\(billTextField.text!)"
-            }
-            
-        }
         
+        if billTextField.text != nil {
+            if billTextField.text! != "" {
+                if tipValue != nil {
+                    if tipValue! != 0 {
+                        tipLabel.text = "\(tipValue!)"
+                        let totalWithTip = tipValue! + Double(billTextField.text!)!
+                        totalWithTipLabel.text = "\(totalWithTip)"
+                    }
+                    else {
+                        tipLabel.text = "No Tip"
+                        totalWithTipLabel.text = "\(billTextField.text!)"
+                    }
+                }
+                else {
+                    tipLabel.text = "Tip is nil"
+                    totalWithTipLabel.text = "\(billTextField.text!)"
+                }
+            }
+        }
     }
-    
+
+
+
+       
+        
     
     @IBAction func implicitlyConvertButtonPressed(sender: UIButton) {
         
